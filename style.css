@@ -1,5 +1,6 @@
 *{
     margin: 0 auto;
+    padding: 0;
 }
 body{
     max-width: 1366px;
@@ -23,15 +24,26 @@ body{
 }
 
 #pixel-board{
-    width: 200px;
-    height: 200px;
-    display: flex;
-    flex-wrap: wrap;
+    border: 1px solid black;
+    width: fit-content;
+    height: fit-content;
+
+}
+.container-pixel{
+    height: 38px;
+    margin: 0;
+    padding: 0;
+    width: fit-content;
 }
 .pixel {
     border: 1px solid black;
     width: 40px;
     height: 40px;
-    box-sizing: border-box;
     background-color: white;
+    display: inline-block;
+    padding: 0;
+    box-sizing: border-box;
+    margin: -1.92px;
 }
+
+

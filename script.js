@@ -78,7 +78,6 @@ function trocaSelected(){
 
     divColorPallet.addEventListener('click', function(event){
        for(let index = 0; index < arrayColors.length; index += 1){
-        console.log(event.target);
         arrayColors[index].classList.remove('selected')
        }
        event.target.classList.add('selected')
@@ -131,17 +130,22 @@ function testando(){
     const pixels = document.getElementsByClassName('pixel');
     const pixelBoard = document.getElementById('pixel-board');
     //let primeiroSquare = document.querySelectorAll('.pixel')[0];
-    const classeColorSelected = document.getElementsByClassName('color selected')[0];
-    const newColor = classeColorSelected.style.backgroundColor;
+    let classeColorSelected = document.querySelector('.selected');
+    let newColor = classeColorSelected.style.backgroundColor;
     const color = 'white';
+    console.log(newColor)
 
 
 
     pixelBoard.addEventListener('click', function(event){
         if(event.target.style.backgroundColor !== newColor){
+            classeColorSelected = document.querySelector('.selected');
+            newColor = classeColorSelected.style.backgroundColor;
             event.target.style.backgroundColor = newColor;
         } else{
-            event.target.style.backgroundColor = color;
+            classeColorSelected = document.querySelector('.selected');
+            newColor = classeColorSelected.style.backgroundColor;
+            event.target.style.backgroundColor = newColor;
         }
         
     })
