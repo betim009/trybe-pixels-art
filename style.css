@@ -25,14 +25,12 @@ body{
 
 #pixel-board{
     border: 1px solid black;
-    width: fit-content;
+    max-width: fit-content;
     height: fit-content;
-
 }
 .container-pixel{
-    height: 38px;
-    margin: 0;
-    padding: 0;
+    height: fit-content;
+    margin: -2px;
     width: fit-content;
 }
 .pixel {
@@ -41,9 +39,18 @@ body{
     height: 40px;
     background-color: white;
     display: inline-block;
-    padding: 0;
-    box-sizing: border-box;
-    margin: -1.92px;
+    margin: -2px;
+}
+
+
+
+
+
+
+#clear-board{
+    margin: 10px;
+    width: 60px;
+    height: 20px;
 }
 
 

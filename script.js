@@ -90,13 +90,14 @@ trocaSelected();
 
 function addCoresNaPaleta(color){
     const paletaDeCores = document.querySelectorAll('.color');
+    const UMpaletaDecores = document.querySelectorAll('.color')[0]
 
     for(let index = 1; index < paletaDeCores.length; index +=1){
         //console.log('teste')
         paletaDeCores[index].style.backgroundColor = color[index];
     }
 }
-addCoresNaPaleta([undefined, 'red', 'blue', 'yellow']);
+addCoresNaPaleta(['undefined', 'red', 'blue', 'yellow']);
 
 
 
@@ -133,7 +134,7 @@ function testando(){
     let classeColorSelected = document.querySelector('.selected');
     let newColor = classeColorSelected.style.backgroundColor;
     const color = 'white';
-    console.log(newColor)
+    // console.log(newColor)
 
 
 
@@ -152,3 +153,67 @@ function testando(){
 }
 testando()
 
+
+function limpandoPixels(){
+    const botaoReset = document.getElementById('clear-board');
+    const pixels = document.getElementsByClassName('pixel');
+    const resetColor = 'white';
+
+    botaoReset.addEventListener('click', function(event){
+        for(let index = 0; index < pixels.length; index +=1){
+            pixels[index].style.backgroundColor = resetColor;
+        }
+    })
+}   
+limpandoPixels();
+
+
+
+
+
+
+
+function botaoVerificaValores (){
+    const btnInput= document.getElementById('board-size');
+    const btnVQV = document.getElementById('generate-board')
+
+    btnVQV.addEventListener('click', function(event){
+        if(btnInput.value === ''){
+            alert('Board inválido!');
+        } else if(btnInput.value < 5){
+            btnInput.value = 5;
+        } else if(btnInput.value > 50){
+            btnInput.value = 50;
+        }
+    })
+}
+botaoVerificaValores()
+
+function createColun (){
+    const btnVQV = document.getElementById('generate-board')
+    const inputValue = document.getElementById('board-size')
+    const body = document.getElementsByTagName('body');
+    const pixelBoard = document.getElementById('pixel-board')
+    const teste = document.getElementsByClassName('teste');
+
+    btnVQV.addEventListener('click', function(event){
+        if (inputValue.value > 4 && inputValue.value < 51) {
+            console.log('TESTANDO')
+            for(let index = 0; index <= inputValue.value; index += 1){
+                const newColun = document.createElement('div');
+                pixelBoard.appendChild(newColun);
+                newColun.className = 'teste'
+            }
+            createLine();
+        }
+    })
+}
+createColun();
+
+function createLine() {
+    const teste = document.querySelector('.teste');
+    const newLine = document.createElement('p');
+
+    teste.appendChild(newLine);
+
+}
