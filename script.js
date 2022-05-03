@@ -167,12 +167,6 @@ function limpandoPixels(){
 }   
 limpandoPixels();
 
-
-
-
-
-
-
 function botaoVerificaValores (){
     const btnInput= document.getElementById('board-size');
     const btnVQV = document.getElementById('generate-board')
@@ -189,31 +183,88 @@ function botaoVerificaValores (){
 }
 botaoVerificaValores()
 
-function createColun (){
+function defineNovoTamanho(){
     const btnVQV = document.getElementById('generate-board')
-    const inputValue = document.getElementById('board-size')
-    const body = document.getElementsByTagName('body');
-    const pixelBoard = document.getElementById('pixel-board')
-    const teste = document.getElementsByClassName('teste');
 
     btnVQV.addEventListener('click', function(event){
-        if (inputValue.value > 4 && inputValue.value < 51) {
-            console.log('TESTANDO')
-            for(let index = 0; index <= inputValue.value; index += 1){
-                const newColun = document.createElement('div');
-                pixelBoard.appendChild(newColun);
-                newColun.className = 'teste'
-            }
-            createLine();
-        }
+        deletPixels();
+        createColun();
+        createLine();
     })
 }
-createColun();
+defineNovoTamanho();
+
+
+
+// function createColun (){
+//     const btnVQV = document.getElementById('generate-board')
+//     const inputValue = document.getElementById('board-size')
+//     const pixelBoard = document.getElementById('pixel-board')
+
+//     btnVQV.addEventListener('click', function(event){
+//         if (inputValue.value > 4 && inputValue.value < 51) {
+//             console.log('TESTANDO')
+//             for(let index = 0; index < inputValue.value; index += 1){
+//                 const newColun = document.createElement('div');
+//                 newColun.className = 'container-pixel';
+//                 pixelBoard.appendChild(newColun);
+//             }
+//             // createLine();
+//             // testedoteste();
+//         }
+//     })
+// }
+// createColun();
+
+
+function createColun(){
+    const inputValue = document.getElementById('board-size');
+    const pixelBoard = document.getElementById('pixel-board');
+
+    if (inputValue.value > 4 && inputValue.value < 51) {
+        console.log('TESTANDO')
+        for(let index = 0; index < inputValue.value; index += 1){
+            const newColun = document.createElement('div');
+            newColun.className = 'container-pixel';
+            pixelBoard.appendChild(newColun);
+        }
+}
+}
 
 function createLine() {
-    const teste = document.querySelector('.teste');
-    const newLine = document.createElement('p');
+    const inputValue = document.getElementById('board-size').value
+    const divContainerPixel = document.querySelectorAll('.container-pixel');
+    for (const element of divContainerPixel) {
+        for(let index = 0; index < inputValue; index += 1){
+            const newLine = document.createElement('div'); 
+            newLine.className = 'pixel';
+            element.appendChild(newLine);
+        }
+        }
+    } 
 
-    teste.appendChild(newLine);
-
+function testedoteste (){
+    const teste = document.querySelectorAll('.teste'); //array
+    const inputValue = document.getElementById('board-size').value //valor input
+    for (const element of teste) {
+        for(let index = 0; index < inputValue; index += 1){
+            const newLine = document.createElement('p'); 
+            element.appendChild(newLine);
+        }
+        
+    }
 }
+// testedoteste();
+
+function deletPixels(){
+    const divPixels = document.querySelectorAll('.container-pixel');
+    for (const element of divPixels) {
+        element.remove() 
+    }
+}
+// deletPixels()
+
+
+
+
+
