@@ -1,6 +1,6 @@
 # :rocket: Trybe Pixels Art Project
 
-Este é um projeto desenvolvido como parte do curso da Trybe, que consiste em uma aplicação web para desenhar com pixels.
+🇧🇷 Este é um projeto desenvolvido como parte do curso da Trybe, que consiste em uma aplicação web para desenhar com pixels.
 
 ## Instruções:
 Para obter uma cópia local do projeto, siga estes passos simples:
@@ -33,8 +33,11 @@ Este projeto foi desenvolvido com as seguintes tecnologias:
 * ![image](https://user-images.githubusercontent.com/62117863/229265521-6525dd0e-8dec-4031-9580-da988fa4b731.png) 
 
 Por favor, deixe-me saber se você tem algum feedback ou sugestão para melhorar este projeto.
+<br> <br>
 
-# :rocket: Trybe Pixels Art Project
+
+
+# 🇺🇸 Pixels Art
 
 This is a project developed as part of the Trybe course, which consists of a web application for drawing with pixels.
 
