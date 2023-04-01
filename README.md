@@ -14,5 +14,6 @@
 
 ## Rode testes:
 * `npm run test`
-* ![image](https://user-images.githubusercontent.com/62117863/229265521-6525dd0e-8dec-4031-9580-da988fa4b731.png)
+<br> </br>
+* ![image](https://user-images.githubusercontent.com/62117863/229265521-6525dd0e-8dec-4031-9580-da988fa4b731.png) 
 
